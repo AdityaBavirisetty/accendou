@@ -1,0 +1,41 @@
+.title {
+  width: 100%;
+  height: 90px;
+}
+.policy-boxes {
+  width: 100%;
+  height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  place-items: center;
+}
+.policy-box {
+  width: 25%;
+  height: 500px;
+  box-shadow: 0 0 0.1rem rgb(0 0 0 / 10%), 0 0.15rem 0.9rem rgb(0 0 0 / 10%);
+  border-radius: 15px;
+}
+.policy-title {
+  width: 100%;
+  height: 15%;
+}
+.policy-inform {
+  width: 100%;
+  height: 70%;
+}
+.submit {
+  width: 100%;
+  height: 15%;
+}
+.extra {
+  text-align: center;
+  vertical-align: middle;
+}
+.pro2 {
+  width: 200px;
+  height: 250px;
+  line-height: 10px;
+  font-size: 20px;
+}

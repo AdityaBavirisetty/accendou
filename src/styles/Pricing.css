@@ -1,0 +1,26 @@
+.pol-details {
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prim-det {
+  width: 500px;
+  height: 400px;
+  margin-top: 30px;
+
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 0 0.1rem rgb(0 0 0 / 10%), 0 0.15rem 0.9rem rgb(0 0 0 / 10%);
+}
+.range {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.range input {
+  width: 80%;
+}
