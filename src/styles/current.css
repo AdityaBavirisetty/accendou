@@ -17,7 +17,7 @@
   justify-content: center;
   height: 50%;
 }
-.button-div button {
+/* .button-div button {
   width: 150px;
   height: 50px;
   font-size: 30px;
@@ -25,4 +25,8 @@
   background-color: #3d99be;
   border: none;
   color: #fff;
+} */
+.pro {
+  color: #000;
+  line-height: 75px;
 }

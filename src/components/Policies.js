@@ -21,7 +21,7 @@ const Policies = () => {
                 <div className="policy-inform">
                     information
                 </div>
-                <div className="submit">
+                <div className="submi">
                     <Link to="/pricing">get quote</Link>
                 </div>
             </div>
@@ -32,7 +32,7 @@ const Policies = () => {
                 <div className="policy-inform">
                     information
                 </div>
-                <div className="submit">
+                <div className="submi">
                     get quote
                 </div>
             </div>
@@ -43,7 +43,7 @@ const Policies = () => {
                 <div className="policy-inform extra">
                     information
                 </div>
-                <div className="submit">
+                <div className="submi">
                     get quote
                 </div>
             </div>
