@@ -10,7 +10,7 @@ const Login = () => {
                                 <Link to="/policies" style={{textDecoration: "none"}}><p>Policies</p></Link>
                       </div>
                       <div className="box">
-                                <Link to="/claims" style={{textDecoration: "none"}}><p>claims</p></Link>
+                                <Link to="/claims" style={{textDecoration: "none"}}><p>Claims</p></Link>
                       </div>
               </div>
         </div>

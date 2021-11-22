@@ -1,6 +1,6 @@
 .pol-details {
   width: 80%;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -8,10 +8,15 @@
 }
 .prim-det {
   width: 500px;
-  height: 400px;
+  height: 300px;
   margin-top: 30px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  gap: 20px;
   text-align: center;
+  border-radius: 20px;
   font-size: 30px;
   box-shadow: 0 0 0.1rem rgb(0 0 0 / 10%), 0 0.15rem 0.9rem rgb(0 0 0 / 10%);
 }

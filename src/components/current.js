@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Webcam from "react-webcam";
 import "../styles/current.css";
-
+import Button from '@mui/material/Button';
 import { useHistory } from "react-router-dom";
 
 const Current = () => {
   let history = useHistory();
   const webcamRef = React.useRef(null);
-  const [imageSrc, setImageSrc] = useState(null);
+  //const [imageSrc, setImageSrc] = useState(null);
   const [camon, setCamon] = useState(false);
 
   const videoConstraints = {
@@ -17,7 +17,7 @@ const Current = () => {
   };
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
-    setImageSrc(imageSrc);
+    // setImageSrc(imageSrc);
   }, [webcamRef]);
 
   const loginFun=()=>{
@@ -26,7 +26,7 @@ const Current = () => {
     },5000)
     setTimeout(() => {
       history.push('/login')
-    },9000)
+    },5000)
  }
   return (
     <div>
@@ -37,6 +37,8 @@ const Current = () => {
               mirrored={true}
               ref={webcamRef}
               videoConstraints={videoConstraints}
+              onUserMedia={loginFun}
+              onUserMediaError={(e) => {console.log(e,"media error")}}
             ></Webcam>
             {/* <button onClick={capture}>Capture photo</button>
             <button
@@ -56,14 +58,14 @@ const Current = () => {
                    Integration - 0%<br />
            </div>
             <div className='button-div'>
-            <button
+            <Button variant="contained"
               onClick={() => {
                 setCamon(true);
-                  loginFun()
+                  //loginFun()
               }}
             >
               Enter
-            </button>
+            </Button>
             </div>
           </div>
         )}

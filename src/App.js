@@ -10,6 +10,8 @@ import Login from './components/Login';
 import Policies from './components/Policies';
 import Pricing from './components/Pricing';
 import Claims from './components/Claims';
+import details from './components/details';
+import Persona from './components/Persona';
 
 function App() {
   return (
@@ -18,11 +20,11 @@ function App() {
       <header>
         <div className="logo">
               <img src={logo2} alt="logo"/>
-              <Link to="/landing"><a>Home</a></Link>
+              <Link to="/persona"><a>Home</a></Link>
         </div>
         
         <h1>Accendo '21</h1>
-        <h5>'Making AI Real For The Digital Insurer'</h5>
+        <h5>'Making <b>AI Real</b> For The Digital Insurer'</h5>
     </header>
     <Switch>
        
@@ -34,7 +36,9 @@ function App() {
        <Route path='/policies' Exact component={Policies}></Route>
        <Route path='/pricing' Exact component={Pricing}></Route>
        <Route path='/claims' Exact component={Claims}></Route>
-       <Route path='/' Exact component={Landing}></Route>
+       <Route path='/details' Exact component={details}></Route>
+       <Route path='/persona' Exact component={Persona}></Route>
+       <Route path='/' Exact component={Persona}></Route>
     </Switch>
     </BrowserRouter>
       
