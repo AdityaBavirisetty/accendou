@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 const Current = () => {
   let history = useHistory();
   const webcamRef = React.useRef(null);
-  //const [imageSrc, setImageSrc] = useState(null);
+  const [imageSrc, setImageSrc] = useState(null);
   const [camon, setCamon] = useState(false);
 
   const videoConstraints = {
@@ -17,17 +17,18 @@ const Current = () => {
   };
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
-    // setImageSrc(imageSrc);
+    setImageSrc(imageSrc);
+    // localStorage
   }, [webcamRef]);
 
-  const loginFun=()=>{
+  const loginFun = () => {
     setTimeout(() => {
       capture()
-    },5000)
+    }, 5000)
     setTimeout(() => {
-      history.push('/login')
-    },5000)
- }
+      history.push('/policies')
+    }, 5000)
+  }
   return (
     <div>
       <div className="camera-container">
@@ -38,34 +39,34 @@ const Current = () => {
               ref={webcamRef}
               videoConstraints={videoConstraints}
               onUserMedia={loginFun}
-              onUserMediaError={(e) => {console.log(e,"media error")}}
+              onUserMediaError={(e) => { console.log(e, "media error") }}
             ></Webcam>
-            {/* <button onClick={capture}>Capture photo</button>
+            <button onClick={capture}>Capture photo</button>
             <button
               onClick={() => {
                 setCamon(false);
               }}
             >
               camera off
-            </button> */}
+            </button>
           </div>
         ) : (
           <div className="login-box">
             <h1 className="note">Welcome to the world of Health care! </h1>
-            <div className="box pro" style={{fontSize:'20px'}}>
-                   Development - 100%<br />
-                   Testing - ongoing <br /> 
-                   Integration - 0%<br />
-           </div>
+            {/* <div className="box pro" style={{ fontSize: '20px' }}>
+              Development - 100%<br />
+              Testing - ongoing <br />
+              Integration - 0%<br />
+            </div> */}
             <div className='button-div'>
-            <Button variant="contained"
-              onClick={() => {
-                setCamon(true);
+              <Button variant="contained"
+                onClick={() => {
+                  setCamon(true);
                   //loginFun()
-              }}
-            >
-              Enter
-            </Button>
+                }}
+              >
+                Enter
+              </Button>
             </div>
           </div>
         )}

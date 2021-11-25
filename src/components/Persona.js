@@ -110,7 +110,7 @@ const Persona = () => {
               <a href="http://15.207.104.100:8080/login">
                 <div className="card">Loss run feature Extraction</div>
               </a>
-              <div className="card">AVA</div>
+              <a href="http://15.207.104.100:3000/modules"><div className="card">AVA</div></a>
               <div className="card">AP fraud solutions</div>
               <a href="http://192.168.3.142:3601/login">
                 <div className="card">Watch Tower</div>
@@ -201,7 +201,7 @@ const Persona = () => {
               <a href="http://15.207.104.100:8080/login">
                 <div className="card">Loss run feature extraction</div>
               </a>
-              <div className="card">AVA</div>
+              <a href="http://15.207.104.100:3000/modules"><div className="card">AVA</div></a>
               <div className="card"></div>
               <div className="card"></div>
             </div>
@@ -222,7 +222,7 @@ const Persona = () => {
             }}
           >
             <div className="per-container">
-              <Link to="/current">
+              <Link to="/login">
                 <div className="card">Touchless health insurance & Claims</div>
               </Link>
               <div className="card">Car damage detection cv</div>

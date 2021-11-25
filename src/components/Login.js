@@ -7,10 +7,10 @@ const Login = () => {
             <div>
             <div className="container">
                       <div className="box" >
-                                <Link to="/policies" style={{textDecoration: "none"}}><p>Policies</p></Link>
+                                <Link to="/current" style={{textDecoration: "none"}}><p>Policies</p></Link>
                       </div>
                       <div className="box">
-                                <Link to="/claims" style={{textDecoration: "none"}}><p>Claims</p></Link>
+                                <Link to="/loginclaim" style={{textDecoration: "none"}}><p>Claims</p></Link>
                       </div>
               </div>
         </div>

@@ -19,6 +19,7 @@ const style = {
     boxShadow: 24,
     p: 4,
   };
+  
 
 const Claims = () => {
     //const [display,setDisplay] = useState(false);
@@ -79,19 +80,6 @@ const Claims = () => {
                 <Button onClick={handleOpen} className="bo" variant="contained">Click here to Submit </Button>
                 
             </div> 
-
-                {/* {display == true ? (
-            // <div className="continue" >
-                <div className="continue-box"> 
-                <div className="continue-title">
-                    Do you like to continue with claim automation 
-                    (please note that your data will be shared with Insurance 
-                    company and bank)??
-                    </div>
-                    <div className="continue-buttons"><button>Yes</button><button onClick={submit}>No</button></div>
-                </div>
-            
-             ):null}      */}
              
       <Modal
         open={open}

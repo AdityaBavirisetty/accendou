@@ -12,6 +12,9 @@ import Pricing from './components/Pricing';
 import Claims from './components/Claims';
 import details from './components/details';
 import Persona from './components/Persona';
+import UserDetails from './components/UserDetails';
+import ExcelToJson from './components/ExcelToJson';
+import LoginClaim from './components/LoginClaim';
 
 function App() {
   return (
@@ -38,6 +41,9 @@ function App() {
        <Route path='/claims' Exact component={Claims}></Route>
        <Route path='/details' Exact component={details}></Route>
        <Route path='/persona' Exact component={Persona}></Route>
+       <Route path='/userdetails' Exact component={UserDetails}></Route>
+       <Route path='/excel' Exact component={ExcelToJson}></Route>
+       <Route path='/loginclaim' Exact component={LoginClaim}></Route>
        <Route path='/' Exact component={Persona}></Route>
     </Switch>
     </BrowserRouter>
