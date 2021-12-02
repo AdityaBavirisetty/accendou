@@ -29,7 +29,11 @@ td {
   margin-bottom: 40px;
 }
 .detail-box {
+<<<<<<< HEAD
   width: 210px;
+=======
+  width: 220px;
+>>>>>>> b577c5a96a4917bba851843f1e0b061bbc640ab1
   height: 70px;
   /* padding: 5px; */
   border: 1px solid black;
