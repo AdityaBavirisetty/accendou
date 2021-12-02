@@ -15,6 +15,8 @@ import Persona from './components/Persona';
 import UserDetails from './components/UserDetails';
 import ExcelToJson from './components/ExcelToJson';
 import LoginClaim from './components/LoginClaim';
+import Language from './components/Language';
+import index1 from './components/index1';
 
 function App() {
   return (
@@ -26,8 +28,8 @@ function App() {
               <Link to="/persona"><a>Home</a></Link>
         </div>
         
-        <h1>Accendo '21</h1>
-        <h5>'Making <b>AI Real</b> For The Digital Insurer'</h5>
+        <h1>IDEA-Intelligent App Store for Insurers </h1>
+        <h4>'Making <b >AI Real</b> For The Digital Insurer'</h4>
     </header>
     <Switch>
        
@@ -44,6 +46,8 @@ function App() {
        <Route path='/userdetails' Exact component={UserDetails}></Route>
        <Route path='/excel' Exact component={ExcelToJson}></Route>
        <Route path='/loginclaim' Exact component={LoginClaim}></Route>
+       <Route path='/language' Exact component={Language}></Route>
+       <Route path='/index' Exact component={index1}></Route>
        <Route path='/' Exact component={Persona}></Route>
     </Switch>
     </BrowserRouter>

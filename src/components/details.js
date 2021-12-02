@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/details.css";
 import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -16,17 +17,17 @@ const names = [
   },
   {
     id:2,
-    name:'policy number',
+    name:'Policy number',
     value:''
   },
   {
     id:3,
-    name:'card number',
+    name:'Card number',
     value:''
   },
   {
     id:4,
-    name:'date of birth',
+    name:'Date of birth',
     value:''
   },
   {
@@ -36,7 +37,7 @@ const names = [
   },
   {
     id:6,
-    name:'unique ID number',
+    name:'Unique ID number',
     value:''
   },
   {
@@ -127,6 +128,7 @@ const Details = () => {
   const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [rotate ,setRotate]=useState(false)
   
   
   useEffect(() => {
@@ -152,14 +154,15 @@ const Details = () => {
     newData[11].value = response.data.PRESCRIPTION.date_of_visit
     newData[12].value = response.data.INVOICES_BILLS.amount
     newData[13].value = response.data.INVOICES_BILLS.bill_number
-    newData[14].value = response.data.INVOICES_BILLS.bill_date_time
-    newData[15].value = response.data.INVOICES_BILLS.admission_date
-    newData[16].value = response.data.INVOICES_BILLS.discharge_date
+    newData[14].value = response.data.INVOICES_BILLS.bill_date_time.substring(0,13)
+    newData[15].value = response.data.INVOICES_BILLS.admission_date.substring(0,13)
+    newData[16].value = response.data.INVOICES_BILLS.discharge_date.substring(0,13)
     newData[17].value = response.data.BANK_DETAILS.account_number
     newData[18].value = response.data.BANK_DETAILS.ifsc_code
     
-      console.log(response.data);
+      console.log(response.data,"data");
       setData(response.data)
+      setRotate(!rotate)
     })
     
   },[]);
@@ -171,7 +174,7 @@ const Details = () => {
           return (
             <div className="detail-box">
               <div><b>{item.name}</b></div>
-              <div>{ data!== null?(item.value):null}</div>
+              <div className="over">{ data!== null?(item.value):null}</div>
             </div>
           );
         })}
@@ -195,16 +198,18 @@ const Details = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      Do you like to continue with claim automation 
-                    (please note that your data will be shared with Insurance 
-                    company and bank)??<br/>
+          The claim amount will be credited within 24 hours <br/>
                     
           </Typography>
           <div className="continue-buttons">
-                   <Link to="/login"><Button variant="contained">Yes</Button></Link><Button variant="contained" onClick={handleClose}>No</Button>
+                   <Link to="/login"><Button variant="contained">okay</Button></Link>
                     </div>
         </Box>
       </Modal>
+      {rotate==false?(
+      <div className="processing">
+      <CircularProgress />
+      </div>):null}
     </div>
   );
 };

@@ -1,0 +1,22 @@
+.search {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+}
+.radio {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+.table-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qa {
+  padding: 20px;
+  gap: 20px;
+}

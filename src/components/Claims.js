@@ -50,7 +50,7 @@ const Claims = () => {
         },
         {
             id:6,
-            value:'Click here to Bank Details'
+            value:'Click here to upload Bank Details'
         }
     ]
     // const name = (e,index)=>{
@@ -70,7 +70,7 @@ const Claims = () => {
                     return(
                         <div className="upload-box">
                     <div className="title"><b>{item.value}</b></div>
-                    <div><input type="file" /></div>
+                    <div><input type="file" multiple/></div>
                 </div>
                     )
                 })}

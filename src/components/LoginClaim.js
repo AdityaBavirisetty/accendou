@@ -1,14 +1,30 @@
 import React from 'react';
 import { useState } from 'react';
 import "../styles/Loginclaim.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const LoginClaim = () => {
+    let history = useHistory();
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
+    // const [usersList,setU]
+    const usernames=[{
+      id:1,
+      name:'munna_lal',password:'Bi2i@1234'
+    },{
+      id:2,
+      name:'aditya',password:'@dity@'
+
+    }]
+    // const passwords=["Bi2i@1234","@dity@"]
 
     const submit = () =>{
-        console.log(username,password);
+      const data = usernames.filter((obj)=>obj.name===username && obj.password===password)
+      if(data.length==1){
+        history.push('/claims')
+      }
+        console.log(data, 'nnnn');
     }
     
     return (
@@ -27,7 +43,7 @@ const LoginClaim = () => {
         </div>
         
         <div class="row button">
-        <Link to="/claims" style={{textDecoration: "none"}}><input type="submit"  onClick={submit} value="Login" /></Link>
+        <input type="submit"  onClick={submit} value="Login" />
         </div>
         {/* <div class="signup-link">Not a member? <button >Signup now</button></div> */}
     </div>

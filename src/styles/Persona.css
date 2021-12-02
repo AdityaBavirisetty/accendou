@@ -1,9 +1,15 @@
 .per-container {
-  width: 80%;
-  height: 30vh;
+  width: 85%;
+  /* height: 30vh; */
   background-color: re;
   align-self: flex-end;
   display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+   
+  /* background-color: red; */
 }
 .card {
   width: 200px;
@@ -16,7 +22,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  font-size: 20px;
+  font-size: 15px;
   margin-right: 20px;
 }
 .card:hover {
@@ -26,7 +32,7 @@
   /* transform: scale(1.5); */
 }
 .per-heading {
-  width: 80%;
+  width: 85%;
   height: 10vh;
   margin: 0 auto;
   display: flex;
@@ -44,10 +50,12 @@
   top: 0;
   justify-content: center;
   gap: 50px;
+
   margin-top: 20px;
+  margin-left: 50px;
 }
 .sticky-filter {
-  height: 40px;
+  height: 60px;
   background-color: rgb(248, 246, 246);
   /* align-self: flex-end; */
   border-radius: 20px;
@@ -55,6 +63,9 @@
   padding: 0 20px;
   cursor: pointer;
   display: flex;
+  font-weight: 600;
+  font-size: 18px;
+  color: #3d99be;
   align-items: center;
   justify-content: center;
 }
@@ -62,10 +73,14 @@ a {
   text-decoration: none;
   color: black;
 }
-/* display: grid; */
-/* grid-template-columns: auto auto auto auto auto; */
-/* grid-gap: 10px; */
-/* flex-wrap: wrap; */
-/* gap: 40px; */
-/* justify-content: space-around;
-  place-items: center;*/
+.grey-color {
+  background-color: rgb(218, 213, 213);
+  cursor: not-allowed;
+}
+/* display: grid; 
+grid-template-columns: auto auto auto auto auto;
+ grid-gap: 10px; 
+ flex-wrap: wrap; 
+ gap: 40px; 
+ justify-content: space-around;
+  place-items: center; */

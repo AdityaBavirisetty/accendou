@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
 }
 header {
   width: 100%;
@@ -31,7 +34,7 @@ header h1 {
   line-height: 1.2;
   text-align: center;
 }
-h5 {
+h4 {
   text-align: center;
   font-family: Exo;
   font-weight: 300;
@@ -54,8 +57,11 @@ h5 {
   color: white;
   text-align: center;
   vertical-align: middle;
-  line-height: 250px;
-  font-size: 40px;
+  /* line-height: 250px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
   box-shadow: 0 0 0.1rem rgb(0 0 0 / 10%), 0 0.15rem 0.9rem rgb(0 0 0 / 10%);
   border-radius: 10px;
 }
